@@ -29,13 +29,13 @@ export const AppNavHeader = observer(() => {
     setAnchorEl(null)
   }
 
-  const navItems: Array<{name: string, route: string}> = [
+  const navItems: Array<{ name: string, route: string }> = [
     { name: "Home", route: "/" },
     { name: "About", route: "/about" },
     { name: "Contact", route: "/contact" },
   ]
 
-  const popperItems: Array<{name: string, route: string}> = [
+  const popperItems: Array<{ name: string, route: string }> = [
     { name: "Login", route: "/login" },
     { name: "Register", route: "/register" },
   ]
@@ -54,10 +54,10 @@ export const AppNavHeader = observer(() => {
             <MenuIcon sx={{ fontSize: 26 }} />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            VITE TEMPLATE
+            KAIOKEN
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item: {name: string, route: string}) => (
+            {navItems.map((item: { name: string, route: string }) => (
               <Link to={item.route} key={item.name} className="nav-link">
                 <Button sx={{ color: "#fff" }}>
                   {item.name}
@@ -87,7 +87,7 @@ export const AppNavHeader = observer(() => {
                 horizontal: "right",
               }}
             >
-              {popperItems.map((item: {name: string, route: string}) => (
+              {popperItems.map((item: { name: string, route: string }) => (
                 <MenuItem key={item.name} onClick={() => { navigate(item.route); handleClose() }}>{item.name}</MenuItem>
               ))}
             </Menu>
